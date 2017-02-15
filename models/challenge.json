@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Название задачи",
+    "type": "text",
+    "name": "title"
+  },
+  {
+    "title": "Цена",
+    "type": "price",
+    "name": "price"
+  },
+  {
+    "title": "Тип",
+    "type": "select",
+    "name": "type",
+    "options": {
+      "range": "Период",
+      "timed": "По таймеру"
+    }
+  },
+  {
+    "title": "Задачи",
+    "type": "fieldList",
+    "name": "tasks",
+    "value": []
+  }
+]

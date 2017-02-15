@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" type="text/css" href="m/css/main.css">
+  <script src="m/js/dot.js"></script>
+  <script src="m/js/main.js"></script>
+</head>
+<body>
+<div id="table"></div>
+<script>
+    var ChallengeEditDialog = new Class({
+        Extends: Ngn.Dialog.RequestForm.Json,
+        options: {
+            // @requiresBefore m/js/formTmpl/challenge.js
+            formTmpl: Ngn.formTmpl.challenge
+        }
+    });
+
+    new Ngn.Grid({
+        requestOptions: {
+            headers: {
+                'Authorization': 'Bearer ' + 123
+            }
+        },
+        basePath: 'http://localhost:8050',
+        ajaxBasePath: '/api/v1/challenges',
+        basicBasePath: '/challenges',
+        listAction: 'items',
+        listAjaxAction: 'items',
+
+
+        tools: {
+            delete: 'Удалить',
+            edit: 'Редактировать'
+        },
+        toolActions: {
+            edit: function (row, opt) {
+                new ChallengeEditDialog({
+                    width: 300,
+                    url: 'http://localhost:8050/api/v1/challenges/json_edit?id='+row.id,
+                    onOkClose: function () {
+                        this.reload(row.id);
+                    }.bind(this)
+                });
+            }
+        }
+
+    }).reload();
+
+    //    new Ngn.Skills.ChallengeDialog({
+    //    title: 'asd',
+    //    width: 300
+    //  });
+</script>
+</body>
+</html>
