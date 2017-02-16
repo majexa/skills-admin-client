@@ -10,18 +10,13 @@
     "name": "price"
   },
   {
-    "title": "Тип",
+    "title": "Тип периода",
     "type": "select",
-    "name": "type",
+    "name": "periodType",
     "options": {
-      "range": "Период",
-      "timed": "По таймеру"
+      "default": "default",
+      "partial": "partial",
+      "userStart": "userStart"
     }
-  },
-  {
-    "title": "Задачи",
-    "type": "fieldList",
-    "name": "tasks",
-    "value": []
   }
 ]

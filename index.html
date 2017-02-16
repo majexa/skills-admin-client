@@ -43,9 +43,20 @@
                     }.bind(this)
                 });
             }
+        },
+
+        formatters: {
+            tasks: function (v) {
+                return v.title ? 'Название: ' + v.title : '';
+            }
         }
 
     }).reload();
+
+//    new ChallengeEditDialog({
+//        width: 300,
+//        url: 'http://localhost:8050/api/v1/challenges/json_edit?id=58a3170ed189fa2b241aeb55'
+//    });
 
     //    new Ngn.Skills.ChallengeDialog({
     //    title: 'asd',
