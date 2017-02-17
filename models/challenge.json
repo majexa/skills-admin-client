@@ -1,8 +1,16 @@
 [
   {
-    "title": "Название задачи",
+    "title": "Дата создания",
+    "type": "date",
+    "name": "dateCreate",
+    "required": true,
+    "_default": "Date.now"
+  },
+  {
+    "title": "Название",
     "type": "text",
-    "name": "title"
+    "name": "title",
+    "required": true
   },
   {
     "title": "Цена",
