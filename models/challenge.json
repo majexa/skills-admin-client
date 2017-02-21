@@ -1,20 +1,23 @@
 [
   {
-    "title": "Дата создания",
+    "title": "Дата",
     "type": "date",
     "name": "dateCreate",
     "required": true,
+    "system": true,
     "_default": "Date.now"
   },
   {
-    "title": "Название",
+    "title": "Название- --мироздания",
     "type": "text",
     "name": "title",
+    "default": 123,
     "required": true
   },
   {
-    "title": "Цена",
+    "title": "Цена или ценообразование",
     "type": "price",
+    "default": 123,
     "name": "price"
   },
   {

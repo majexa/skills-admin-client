@@ -11,11 +11,11 @@ module.exports = gulp.task('ngn-build', function () {
   var reportOptions = {
     err: true,
     stderr: true,
-    stdout: true
+    stdout: false
   };
   gulp.src('index.html', {read: false})
     .pipe(ngnJs(opt))
     .pipe(ngnJs.reporter(reportOptions))
-    .pipe(ngnCss(opt))
-    .pipe(ngnCss.reporter(reportOptions));
+    // .pipe(ngnCss(opt))
+    // .pipe(ngnCss.reporter(reportOptions));
 });

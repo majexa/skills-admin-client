@@ -1,6 +1,5 @@
-Ngn.Skills.ChallengeDialog = new Class({
+Ngn.ChallengeDialog = new Class({
   Extends: Ngn.Dialog.RequestForm.Json,
-  Implements: [Ngn.Dialog.RequestForm.Json.NoStartupRequest],
   options: {
     // @requiresBefore m/js/formTmpl/challenge.js
     formTmpl: Ngn.formTmpl.challenge,

@@ -23,5 +23,5 @@ module.exports = gulp.task('dev', function () {
   ]).on('change', browserSync.reload);
   gulp.watch([
     'models/*.json'
-  ], ['ngn-form-build']);
+  ], ['ngn-form-build', 'crud-routes-gen']);
 });
