@@ -5,8 +5,14 @@ Ngn.ChallengeGrid = new Class({
     menu: [{
       title: 'Создать',
       cls: 'add',
-      action: function () {
-        new Ngn.ChallengeDialogNew();
+      action: function (grid) {
+        new Ngn.ChallengeDialogNew({
+          onOkClose: function() {
+            console.log(grid);
+            grid.reload();
+
+          }
+        });
       }
     }],
 
@@ -16,11 +22,8 @@ Ngn.ChallengeGrid = new Class({
       }
     },
     basePath: 'http://localhost:8050',
-    ajaxBasePath: '/api/v1/challenges',
-    basicBasePath: '/challenges',
-    listAction: 'items',
-    listAjaxAction: 'items',
-
+    restBasePath: '/api/v1',
+    basicBasePath: 'challenge',
     tools: {
       delete: 'Удалить',
       edit: 'Редактировать'
@@ -29,7 +32,7 @@ Ngn.ChallengeGrid = new Class({
       edit: function (row, opt) {
         new Ngn.ChallengeDialogEdit({
           width: 300,
-          url: 'http://localhost:8050/api/v1/challenges/json_edit?id=' + row.id,
+          url: 'http://localhost:8050/api/v1/challenge/' + row.id,
           onOkClose: function () {
             this.reload(row.id);
           }.bind(this)

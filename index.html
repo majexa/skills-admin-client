@@ -8,8 +8,31 @@
 <body>
 <div id="table"></div>
 <script>
-    new Ngn.ChallengeGrid().reload();
-    new Ngn.ChallengeDialogNew();
+
+  Ngn.Grid.defaultDialogOpts = {
+    width: 250
+
+  };
+    var grid = new Ngn.ChallengeGrid({
+      toolAction: {
+        edit: function (row, btn) {
+          new Ngn.Dialog.RequestForm(Object.merge({
+            id: 'dlgEdit' + row.id,
+            url: this.options.basePath + this.options.restBasePath + '/' + row.id,
+            title: 'Редактирование',
+            onOkClose: function () {
+              this.reload(row.id);
+            }.bind(this)
+          }, Ngn.Grid.defaultDialogOpts));
+        }
+      }
+    });
+    grid.reload();
+//    dialog.addEvent('okClose', function() {
+//      grid.reload();
+//    });
+
+
 </script>
 </body>
 </html>

@@ -11,17 +11,20 @@ module.exports = gulp.task('dev', function () {
   gulp.watch('index.html', ['copy-index']);
   //gulp.watch('m/**/*', ['copy-m']);
   gulp.watch([
-    '/home/user/ngn-env/ngn/i/js/ngn/**/*.js',
-    '/home/user/ngn-env/ngn/i/css/**/*.css',
+    '/home/masted/ngn-env/ngn/i/js/ngn/**/*.js',
+    '/home/masted/ngn-env/ngn/i/css/**/*.css',
     'm/**/*'
   ], ['ngn-build']);
   gulp.watch([
     'build/public/m/css/*.css',
     'build/public/m/js/*.js',
-    'build/public/index.html',
-    'build/public/m/js/formTmpl/*.js'
-  ]).on('change', browserSync.reload);
+    'build/public/index.html'
+  ]).on('change', function() {
+    setTimeout(function () {
+      browserSync.reload()
+    }, 500)
+  });
   gulp.watch([
     'models/*.json'
-  ], ['ngn-form-build', 'crud-routes-gen']);
+  ], ['crud-routes-gen', 'mongoose-scheme-gen', 'ngn-form-build']);
 });

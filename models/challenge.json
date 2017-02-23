@@ -8,7 +8,7 @@
     "_default": "Date.now"
   },
   {
-    "title": "Название- --мироздания",
+    "title": "Названия",
     "type": "text",
     "name": "title",
     "default": 123,

@@ -5,7 +5,7 @@ module.exports = gulp.task('ngn-copy-css-refs', function() {
   return gulp.src('build/public/m/css/*.css')
     .pipe(cssUserefAbs({
       absSources: {
-        'i': '/home/user/ngn-env/ngn'
+        'i': '/home/masted/ngn-env/ngn'
       }
     }))
     .pipe(gulp.dest('build/public'));
