@@ -6,7 +6,7 @@ module.exports = gulp.task('ngn-build', function () {
   var opt = {
     ngnEnvFolder: '/home/masted/ngn-env',
     buildFolder: 'build/public/m',
-    projectFolder: '/home/masted/www/skills-admin-client',
+    projectFolder: '/home/masted/www/skills-admin-client-dev',
     name: 'main'
   };
   var reportOptions = {
