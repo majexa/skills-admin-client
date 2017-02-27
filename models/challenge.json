@@ -2,20 +2,54 @@
   {
     "title": "Дата",
     "type": "date",
-    "name": "dateCreate",
+    "name": "dt",
     "required": true,
     "system": true,
     "_default": "Date.now"
   },
   {
-    "title": "Названия",
+    "title": "Лого челленджа",
+    "system": true,
+    "name": "image",
+    "type": "file"
+  },
+  {
+    "title": "Тип скила",
+    "type": "select",
+    "name": "skillType",
+    "options": {
+      "power": "power",
+      "energy": "energy",
+      "mastery": "mastery"
+    }
+  },
+  {
+    "title": "Тип отчёта",
+    "type": "select",
+    "name": "reportType",
+    "options": {
+      "photo": "photo",
+      "text": "text"
+    }
+  },
+  {
+    "title": "Название",
     "type": "text",
     "name": "title",
-    "default": 123,
     "required": true
   },
   {
-    "title": "Цена или ценообразование",
+    "title": "Краткое описание",
+    "type": "textarea",
+    "name": "shortDesc"
+  },
+  {
+    "title": "Полное описание",
+    "type": "textarea",
+    "name": "fullDesc"
+  },
+  {
+    "title": "Цена",
     "type": "price",
     "default": 123,
     "name": "price"

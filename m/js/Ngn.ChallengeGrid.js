@@ -21,7 +21,7 @@ Ngn.ChallengeGrid = new Class({
         'Authorization': 'Bearer ' + 123
       }
     },
-    basePath: 'http://localhost:8050',
+    basePath: serverUrl,
     restBasePath: '/api/v1',
     basicBasePath: 'challenge',
     tools: {
@@ -32,7 +32,7 @@ Ngn.ChallengeGrid = new Class({
       edit: function (row, opt) {
         new Ngn.ChallengeDialogEdit({
           width: 300,
-          url: 'http://localhost:8050/api/v1/challenge/' + row.id,
+          url: serverUrl + '/api/v1/challenge/' + row.id,
           onOkClose: function () {
             this.reload(row.id);
           }.bind(this)
@@ -46,4 +46,5 @@ Ngn.ChallengeGrid = new Class({
       }
     }
   }
+
 });

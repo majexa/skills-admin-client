@@ -15,6 +15,7 @@ module.exports = gulp.task('dev', function () {
     '/home/masted/ngn-env/ngn/i/css/**/*.css',
     'm/**/*'
   ], ['ngn-build']);
+
   gulp.watch([
     'build/public/m/css/*.css',
     'build/public/m/js/*.js',
@@ -26,5 +27,5 @@ module.exports = gulp.task('dev', function () {
   });
   gulp.watch([
     'models/*.json'
-  ], ['crud-routes-gen', 'mongoose-scheme-gen', 'ngn-form-build']);
+  ], ['mongoose-scheme-gen', 'crud-routes-gen', 'ngn-form-build']);
 });

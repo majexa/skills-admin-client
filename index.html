@@ -1,34 +1,75 @@
 <html>
 <head>
-  <title>Test</title>
-  <link rel="stylesheet" type="text/css" href="m/css/main.css">
-  <script src="m/js/dot.js"></script>
-  <script src="m/js/main.js"></script>
+    <title>Skills Admin</title>
+    <link rel="stylesheet" type="text/css" href="m/css/main.css">
+    <link rel="stylesheet" type="text/css" href="m/css/image.css">
+    <script src="m/js/config.js"></script>
+    <script src="m/js/dot.js"></script>
+    <script src="m/js/main.js"></script>
 </head>
 <body>
 <div id="table"></div>
 <script>
+  var openImage
   Ngn.Grid.defaultDialogOpts = {
     width: 250
   };
-    var grid = new Ngn.ChallengeGrid({
-      toolAction: {
-        edit: function (row, btn) {
-          new Ngn.Dialog.RequestForm(Object.merge({
-            id: 'dlgEdit' + row.id,
-            url: this.options.basePath + this.options.restBasePath + '/' + row.id,
-            title: 'Редактирование',
-            onOkClose: function () {
-              this.reload(row.id);
-            }.bind(this)
-          }, Ngn.Grid.defaultDialogOpts));
-        }
+  var grid = new Ngn.ChallengeGrid({
+    onReloadComplete: function () {
+      var id;
+      for (id in grid.esItems) {
+        (function (id) {
+          grid.esItems[id].getElement('.imagePreview').addEvent('click', function () {
+            var url = grid.getLink() + '/' + id + '/uploadImage';
+            console.log(url);
+            new Ngn.ChallengeImageDialog({
+              url: url
+            });
+            return false;
+          });
+        })(id);
       }
-    });
-    grid.reload();
-//    dialog.addEvent('okClose', function() {
-//      grid.reload();
-//    });
+    },
+    toolAction: {
+      edit: function (row, btn) {
+        new Ngn.Dialog.RequestForm(Object.merge({
+          id: 'dlgEdit' + row.id,
+          url: this.options.basePath + this.options.restBasePath + '/' + row.id,
+          title: 'Редактирование',
+          onOkClose: function () {
+            this.reload(row.id);
+          }.bind(this)
+        }, Ngn.Grid.defaultDialogOpts));
+      }
+    },
+    formatters: {
+      dt: function (v) {
+        return Date.parse(v).format('%d %B <small>(%A)</small>');
+        //return days[d.getDay()] + '. ' + d.format('%d.%m.%Y %H:%M');
+      },
+      image: function (v) {
+        return '<div class="imagePreview" title="Upload Logo..."></div>';
+      },
+      periodType: function (periodTtype) {
+        var icon;
+        switch (periodTtype) {
+          case 'userStart':
+            icon = 'user';
+            break;
+          case 'partial':
+            icon = 'slices';
+            break;
+          default:
+            icon = 'local';
+        }
+        return '<span class="smIcons ' + icon + '"><i></i><small>' + periodTtype + '</small></span>'
+      }
+    }
+  });
+  grid.reload();
+  //    dialog.addEvent('okClose', function() {
+  //      grid.reload();
+  //    });
 
 
 </script>
