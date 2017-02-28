@@ -4,11 +4,6 @@ Ngn.toObj('Ngn.formTmpl.challengeImage', '<div class="apeform"><form action="" e
 <div id="ff5b1e2d23587b0f9acc98353f548de94jsInline" style="display:none">\
 \
 (function() {\
-  Ngn.Form.forms.ff5b1e2d23587b0f9acc98353f548de94.initUpload({\
-  url: serverUrl + \'/api/v1/challenge/123/uploadImage\'\
-  });\
+  Ngn.Form.forms.ff5b1e2d23587b0f9acc98353f548de94.initUpload();\
 }).delay(100);\
 </div></form></div>');
-
-
-

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Дата старта",
+    "type": "date",
+    "name": "startDt"
+  },
+  {
+    "title": "ID челенджа",
+    "type": "text",
+    "name": "challengeId"
+  },
+  {
+    "title": "ID пользователя",
+    "type": "text",
+    "name": "userId"
+  }
+]

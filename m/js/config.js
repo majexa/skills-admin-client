@@ -1,1 +1,1 @@
-window.serverUrl = 'http://localhost:8060';
+window.serverUrl = 'http://localhost:8050';

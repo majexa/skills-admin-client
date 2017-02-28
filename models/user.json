@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Дата",
+    "type": "date",
+    "name": "registerDate",
+    "system": true,
+    "_default": "Date.now"
+  },
+  {
+    "title": "Пароль",
+    "type": "text",
+    "name": "password"
+  },
+  {
+    "title": "Телефон",
+    "type": "text",
+    "name": "phone"
+  },
+  {
+    "title": "token",
+    "type": "text",
+    "name": "token"
+  }
+]

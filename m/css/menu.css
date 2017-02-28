@@ -1,0 +1,7 @@
+.menu {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 5px;
+}
+.menu a {
+    margin-right: 10px;
+}

@@ -8,12 +8,6 @@
     "_default": "Date.now"
   },
   {
-    "title": "Лого челленджа",
-    "system": true,
-    "name": "image",
-    "type": "file"
-  },
-  {
     "title": "Тип скила",
     "type": "select",
     "name": "skillType",
