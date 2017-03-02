@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Название",
+    "type": "textarea",
+    "name": "description",
+    "required": true
+  },
+  {
+    "title": "Челлендж",
+    "type": "text",
+    "name": "challengeId",
+    "required": true
+  }
+]

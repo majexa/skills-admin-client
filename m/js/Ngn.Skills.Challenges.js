@@ -1,4 +1,4 @@
-Ngn.Skills.Challanges = new Class({
+Ngn.Skills.Challenges = new Class({
 
   initialize: function() {
     Ngn.Grid.defaultDialogOpts = {

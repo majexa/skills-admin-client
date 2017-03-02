@@ -1,4 +1,4 @@
-Ngn.toObj('Ngn.formTmpl.challenge', '<div class="apeform"><form action="" id="faa1a664a9e1c4a3f61e5599a17c56925" method="post"><div class="element row_skillType type_select name_skillType"><p class="label"><span class="ttl">Тип скила</span><span>:</span></p><div class="field-wrapper">\
+Ngn.toObj('Ngn.formTmpl.challenge', '<div class="apeform"><form action="" id="fa61afa93fe367fd5a84279533e84a450" method="post"><div class="element row_skillType type_select name_skillType"><p class="label"><span class="ttl">Тип скила</span><span>:</span></p><div class="field-wrapper">\
 <select name="skillType" maxlength="255" name="skillType" value="" id="skillTypei">\
 	<option value="power">power</option>\
 	<option value="energy">energy</option>\
@@ -17,13 +17,13 @@ Ngn.toObj('Ngn.formTmpl.challenge', '<div class="apeform"><form action="" id="fa
 <input size="40" type="text" id="pricei" maxlength="11" name="price" value="123" />\
 </div><div class="help"></div><div class="clear"></div></div><div class="element row_periodType type_select name_periodType"><p class="label"><span class="ttl">Тип периода</span><span>:</span></p><div class="field-wrapper">\
 <select name="periodType" maxlength="255" name="periodType" value="" id="periodTypei">\
-	<option value="default">default</option>\
+	<option value="default">1 день</option>\
 	<option value="partial">partial</option>\
 	<option value="userStart">userStart</option></select>\
 </div><div class="help"></div><div class="clear"></div></div><div class="clear"></div>\
-<div id="faa1a664a9e1c4a3f61e5599a17c56925jsInline" style="display:none">\
+<div id="fa61afa93fe367fd5a84279533e84a450jsInline" style="display:none">\
 \
 (function() {\
-  Ngn.Form.forms.faa1a664a9e1c4a3f61e5599a17c56925.initUpload();\
+  Ngn.Form.forms.fa61afa93fe367fd5a84279533e84a450.initUpload();\
 }).delay(100);\
 </div></form></div>');

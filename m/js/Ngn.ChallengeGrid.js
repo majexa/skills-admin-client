@@ -10,12 +10,10 @@ Ngn.ChallengeGrid = new Class({
           onOkClose: function() {
             console.log(grid);
             grid.reload();
-
           }
         });
       }
     }],
-
     requestOptions: {
       headers: {
         'Authorization': 'Bearer ' + 123
@@ -39,7 +37,6 @@ Ngn.ChallengeGrid = new Class({
         });
       }
     },
-
     formatters: {
       tasks: function (v) {
         return v.title ? 'Название: ' + v.title : '';

@@ -53,7 +53,7 @@
     "type": "select",
     "name": "periodType",
     "options": {
-      "default": "default",
+      "default": "1 день",
       "partial": "partial",
       "userStart": "userStart"
     }
