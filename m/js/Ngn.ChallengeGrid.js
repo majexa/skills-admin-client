@@ -40,6 +40,9 @@ Ngn.ChallengeGrid = new Class({
     formatters: {
       tasks: function (v) {
         return v.title ? 'Название: ' + v.title : '';
+      },
+      title: function(title, challengeId) {
+        return '<a href="#tasks-' + challengeId+'" target="_blank">' + title + '</a>';
       }
     }
   }

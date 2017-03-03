@@ -7,8 +7,9 @@
   },
   {
     "title": "Челлендж",
-    "type": "text",
+    "type": "select",
     "name": "challengeId",
+    "options": [],
     "required": true
   }
 ]
