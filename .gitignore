@@ -4,3 +4,4 @@ node_modules
 .env
 u/*
 m/js/cache/*
+config.js
