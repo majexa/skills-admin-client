@@ -4,7 +4,7 @@ Ngn.AdminMenu = new Class({
     this.eMenu = new Element('div.menu').inject(container);
     this.createButton('Челленджи', 'challenges');
     this.createButton('Пользователи', 'users', 'user');
-    this.createButton('Задачи', 'tasks');
+    //this.createButton('Задачи', 'tasks');
     this.createLogoutButton();
   },
 

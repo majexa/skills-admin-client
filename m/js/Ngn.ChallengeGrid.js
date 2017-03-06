@@ -24,7 +24,8 @@ Ngn.ChallengeGrid = new Class({
     basicBasePath: 'challenge',
     tools: {
       delete: 'Удалить',
-      edit: 'Редактировать'
+      edit: 'Редактировать',
+      view: 'Предпросмотр',
     },
     toolActions: {
       edit: function (row, opt) {
@@ -35,6 +36,9 @@ Ngn.ChallengeGrid = new Class({
             this.reload(row.id);
           }.bind(this)
         });
+      },
+      view: function (row, opt) {
+        console.log([row, opt]);
       }
     },
     formatters: {
@@ -42,7 +46,7 @@ Ngn.ChallengeGrid = new Class({
         return v.title ? 'Название: ' + v.title : '';
       },
       title: function(title, challengeId) {
-        return '<a href="#tasks-' + challengeId+'" target="_blank">' + title + '</a>';
+        return '<a href="#tasks-' + challengeId+'" onClick="window.location.reload()">' + title + '</a>';
       }
     }
   }

@@ -57,5 +57,13 @@
       "partial": "partial",
       "userStart": "userStart"
     }
+  },
+  {
+    "title": "Задачи",
+    "system": true,
+    "name": "tasks",
+    "_brackets": true,
+    "_type": "mongoose.Schema.Types.ObjectId",
+    "_ref": "Task"
   }
 ]

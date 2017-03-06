@@ -21,6 +21,7 @@ Ngn.toObj('Ngn.formTmpl.challenge', '<div class="apeform"><form action="" id="fa
 	<option value="partial">partial</option>\
 	<option value="userStart">userStart</option></select>\
 </div><div class="help"></div><div class="clear"></div></div><div class="clear"></div>\
+<div id="fa61afa93fe367fd5a84279533e84a450js" style="display:none">/u/js/cache/form/fa61afa93fe367fd5a84279533e84a450.js?1488687281</div>\
 <div id="fa61afa93fe367fd5a84279533e84a450jsInline" style="display:none">\
 \
 (function() {\

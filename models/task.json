@@ -7,9 +7,9 @@
   },
   {
     "title": "Челлендж",
-    "type": "select",
+    "type": "hidden",
     "name": "challengeId",
-    "options": [],
-    "required": true
+    "_type": "mongoose.Schema.Types.ObjectId",
+    "_ref": "Challenge"
   }
 ]

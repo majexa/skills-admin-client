@@ -1,14 +1,27 @@
 Ngn.Skills.Tasks = new Class({
 
-  initialize: function(challengeId) {
+  initialize: function (app, challengeId) {
     if (!challengeId) throw new Error('challengeId not defined');
-    console.log(challengeId);
+
+    // -----------
+    new Request.JSON({
+      url: apiUrl + '/challenge/' + challengeId,
+      onComplete: function(challange) {
+        app.setTitle('Задачи челленджа «' + challange.title + '»');
+      }
+    }).get();
+    // -----------
+
     var grid = new Ngn.Skills.Tasks.Grid({
       challengeId: challengeId,
       basePath: serverUrl,
       restBasePath: '/api/v1',
       basicBasePath: 'task',
-      // ============================= MENU ===============================
+      // ================ TOOL =================
+      tools: {
+        delete: 'Удалить'
+      },
+      // ================ MENU =================
       menu: [{
         title: 'Создать',
         cls: 'add',
@@ -22,9 +35,14 @@ Ngn.Skills.Tasks = new Class({
               // @requiresBefore m/js/formTmpl/task.js
               formTmpl: Ngn.formTmpl.task,
               url: serverUrl + '/api/v1/task',
-              onOkClose: function() {
+              onOkClose: function () {
                 grid.reload();
               }
+            },
+            makeStartupRequest: function () {
+              this.urlResponse({
+                challengeId: challengeId
+              });
             }
           });
           new dialog();

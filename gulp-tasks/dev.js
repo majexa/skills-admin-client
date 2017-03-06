@@ -9,7 +9,7 @@ module.exports = gulp.task('dev', function () {
     }
   });
   gulp.watch('index.html', ['copy-index']);
-  //gulp.watch('m/**/*', ['copy-m']);
+  gulp.watch('m/**/*', ['copy-m']);
   gulp.watch([
       process.env.NGN_ENV_FOLDER + '/ngn/i/js/ngn/**/*.js',
       process.env.NGN_ENV_FOLDER + '/ngn/i/css/**/*.css',
