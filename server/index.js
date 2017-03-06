@@ -12,7 +12,7 @@ const server = new Hapi.Server({
     }
   }
 });
-server.connection({ port: 8052 });
+server.connection({ port: process.env.PORT });
 server.register(Inert, () => {});
 server.register(require('vision'), (err) => {
   Hoek.assert(!err, err);

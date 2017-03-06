@@ -7,7 +7,7 @@ Ngn.ChallengeGrid = new Class({
       cls: 'add',
       action: function (grid) {
         new Ngn.ChallengeDialogNew({
-          onOkClose: function() {
+          onOkClose: function () {
             console.log(grid);
             grid.reload();
           }
@@ -32,21 +32,34 @@ Ngn.ChallengeGrid = new Class({
         new Ngn.ChallengeDialogEdit({
           width: 300,
           url: serverUrl + '/api/v1/challenge/' + row.id,
-          onOkClose: function () {
+          onOkClose: function () {//
             this.reload(row.id);
           }.bind(this)
         });
       },
       view: function (row, opt) {
-        console.log([row, opt]);
+        let frame = new Ngn.Dialog.Iframe({
+          iframeUrl: 'http://majexa.ru:8051',
+          iframeStyles: {
+            width: 300,
+            height: 500
+          },
+          width: 340,//
+          height: 540
+        });
+        frame.eIframe.onload = function () {
+          frame.eIframe.contentWindow.postMessage({
+            challengeId: row.id
+          }, '*');
+        };
       }
     },
     formatters: {
       tasks: function (v) {
         return v.title ? 'Название: ' + v.title : '';
       },
-      title: function(title, challengeId) {
-        return '<a href="#tasks-' + challengeId+'" onClick="window.location.reload()">' + title + '</a>';
+      title: function (title, challengeId) {
+        return '<a href="#tasks-' + challengeId + '" onClick="window.location.reload()">' + title + '</a>';
       }
     }
   }
