@@ -7,12 +7,12 @@ const server = new Hapi.Server({
   connections: {
     routes: {
       files: {
-        relativeTo: Path.join(__dirname, 'public')
+        relativeTo: Path.join(__dirname, '../build/public')
       }
     }
   }
 });
-server.connection({ port: 3000 });
+server.connection({ port: 8052 });
 server.register(Inert, () => {});
 server.register(require('vision'), (err) => {
   Hoek.assert(!err, err);
@@ -21,7 +21,7 @@ server.register(require('vision'), (err) => {
       html: require('handlebars')
     },
     relativeTo: __dirname,
-    path: 'public'
+    path: '../build/public'
   });
 });
 server.route({

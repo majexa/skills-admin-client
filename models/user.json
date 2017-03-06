@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Дата",
+    "type": "date",
+    "name": "registerDate",
+    "system": true,
+    "_default": "Date.now"
+  },
+  {
+    "title": "Телефон",
+    "type": "text",
+    "name": "phone"
+  }
+]

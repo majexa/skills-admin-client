@@ -10,40 +10,45 @@ Ngn.ChallengeGrid = new Class({
           onOkClose: function() {
             console.log(grid);
             grid.reload();
-
           }
         });
       }
     }],
-
     requestOptions: {
       headers: {
         'Authorization': 'Bearer ' + 123
       }
     },
-    basePath: 'http://localhost:8050',
+    basePath: serverUrl,
     restBasePath: '/api/v1',
     basicBasePath: 'challenge',
     tools: {
       delete: 'Удалить',
-      edit: 'Редактировать'
+      edit: 'Редактировать',
+      view: 'Предпросмотр',
     },
     toolActions: {
       edit: function (row, opt) {
         new Ngn.ChallengeDialogEdit({
           width: 300,
-          url: 'http://localhost:8050/api/v1/challenge/' + row.id,
+          url: serverUrl + '/api/v1/challenge/' + row.id,
           onOkClose: function () {
             this.reload(row.id);
           }.bind(this)
         });
+      },
+      view: function (row, opt) {
+        console.log([row, opt]);
       }
     },
-
     formatters: {
       tasks: function (v) {
         return v.title ? 'Название: ' + v.title : '';
+      },
+      title: function(title, challengeId) {
+        return '<a href="#tasks-' + challengeId+'" onClick="window.location.reload()">' + title + '</a>';
       }
     }
   }
+
 });

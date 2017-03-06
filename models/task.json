@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Название",
+    "type": "textarea",
+    "name": "description",
+    "required": true
+  },
+  {
+    "title": "Челлендж",
+    "type": "hidden",
+    "name": "challengeId",
+    "_type": "mongoose.Schema.Types.ObjectId",
+    "_ref": "Challenge"
+  }
+]

@@ -1,0 +1,13 @@
+.imagePreview {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #dd4069;
+    border: 2px solid #8d2747;
+}
+.imagePreview:hover {
+    background-color: #82d0ff;
+    border-color: #5f9abe;
+}

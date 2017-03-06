@@ -9,12 +9,13 @@ module.exports = gulp.task('dev', function () {
     }
   });
   gulp.watch('index.html', ['copy-index']);
-  //gulp.watch('m/**/*', ['copy-m']);
+  gulp.watch('m/**/*', ['copy-m']);
   gulp.watch([
-    '/home/masted/ngn-env/ngn/i/js/ngn/**/*.js',
-    '/home/masted/ngn-env/ngn/i/css/**/*.css',
+      process.env.NGN_ENV_FOLDER + '/ngn/i/js/ngn/**/*.js',
+      process.env.NGN_ENV_FOLDER + '/ngn/i/css/**/*.css',
     'm/**/*'
   ], ['ngn-build']);
+
   gulp.watch([
     'build/public/m/css/*.css',
     'build/public/m/js/*.js',
@@ -26,5 +27,5 @@ module.exports = gulp.task('dev', function () {
   });
   gulp.watch([
     'models/*.json'
-  ], ['crud-routes-gen', 'mongoose-scheme-gen', 'ngn-form-build']);
+  ], ['mongoose-scheme-gen', 'crud-routes-gen', 'ngn-form-build']);
 });

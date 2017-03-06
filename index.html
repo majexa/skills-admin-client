@@ -1,36 +1,17 @@
 <html>
 <head>
-  <title>Test</title>
-  <link rel="stylesheet" type="text/css" href="m/css/main.css">
-  <script src="m/js/dot.js"></script>
-  <script src="m/js/main.js"></script>
+    <title>Skills Admin</title>
+    <link rel="stylesheet" type="text/css" href="m/css/main.css">
+    <link rel="stylesheet" type="text/css" href="m/css/image.css">
+    <link rel="stylesheet" type="text/css" href="m/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="m/css/layout.css">
+    <script src="m/js/config.js"></script>
+    <script src="m/js/dot.js"></script>
+    <script src="m/js/main.js"></script>
 </head>
 <body>
-<div id="table"></div>
 <script>
-  Ngn.Grid.defaultDialogOpts = {
-    width: 250
-  };
-    var grid = new Ngn.ChallengeGrid({
-      toolAction: {
-        edit: function (row, btn) {
-          new Ngn.Dialog.RequestForm(Object.merge({
-            id: 'dlgEdit' + row.id,
-            url: this.options.basePath + this.options.restBasePath + '/' + row.id,
-            title: 'Редактирование',
-            onOkClose: function () {
-              this.reload(row.id);
-            }.bind(this)
-          }, Ngn.Grid.defaultDialogOpts));
-        }
-      }
-    });
-    grid.reload();
-//    dialog.addEvent('okClose', function() {
-//      grid.reload();
-//    });
-
-
+new Ngn.Skills.App();
 </script>
 </body>
 </html>
