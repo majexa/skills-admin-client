@@ -39,13 +39,12 @@ Ngn.ChallengeGrid = new Class({
       },
       view: function (row, opt) {
         let frame = new Ngn.Dialog.Iframe({
+          title: row.data.title,
           iframeUrl: 'http://majexa.ru:8051',
           iframeStyles: {
-            width: 300,
-            height: 500
+             height: 450
           },
-          width: 340,//
-          height: 540
+          width: 320
         });
         frame.eIframe.onload = function () {
           frame.eIframe.contentWindow.postMessage({
