@@ -40,7 +40,7 @@ Ngn.ChallengeGrid = new Class({
       view: function (row, opt) {
         let frame = new Ngn.Dialog.Iframe({
           title: row.data.title,
-          iframeUrl: 'http://majexa.ru:8051',
+          iframeUrl: window.iframeUrl,
           iframeStyles: {
              height: 450
           },
