@@ -10,5 +10,10 @@
     "title": "Телефон",
     "type": "text",
     "name": "phone"
+  },
+  {
+    "title": "Device token",
+    "type": "text",
+    "name": "deviceToken"
   }
 ]

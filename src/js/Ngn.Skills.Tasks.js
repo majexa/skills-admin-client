@@ -32,7 +32,7 @@ Ngn.Skills.Tasks = new Class({
             options: {
               title: 'Создание',
               width: 250,
-              // @requiresBefore m/js/formTmpl/task.js
+              // @requiresBefore src/js/formTmpl/task.js
               formTmpl: Ngn.formTmpl.task,
               url: serverUrl + '/api/v1/task',
               onOkClose: function () {
