@@ -1,5 +1,15 @@
 [
   {
+    "title": "Название",
+    "type": "text",
+    "name": "title",
+    "required": true
+  },
+  {
+    "type": "col",
+    "_virtual": true
+  },
+  {
     "title": "Дата",
     "type": "date",
     "name": "dt",
@@ -27,12 +37,6 @@
     }
   },
   {
-    "title": "Название",
-    "type": "text",
-    "name": "title",
-    "required": true
-  },
-  {
     "title": "Краткое описание",
     "type": "textarea",
     "name": "shortDesc"
@@ -41,6 +45,10 @@
     "title": "Полное описание",
     "type": "textarea",
     "name": "fullDesc"
+  },
+  {
+    "type": "col",
+    "_virtual": true
   },
   {
     "title": "Цена",
